@@ -1,4 +1,5 @@
-let testbutton = document.getElementById(testbutton);
-testbutton.addEventListener("click", funtion(){
-document.body.style.backgroudcolor = "#AAAAFF";
+let testbutton = document.getElementById('testbutton');
+
+testbutton.addEventListener("click", funtion(),{
+    document.body.style.backgroudcolor = "#AAAAFF";
 });
