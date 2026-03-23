@@ -1,6 +1,10 @@
 body
   {
-    background-color: #FFAAAA;
+    background-color: #FFAAAA;  
+    margin-top: 50px; 
+    margin-right: 450px; 
+    margin-bottom: 50px; 
+    margin-left: 50px; 
   }
 p
   {
