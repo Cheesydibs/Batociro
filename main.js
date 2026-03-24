@@ -1,5 +1,4 @@
-let testbutton = document.getElementById('testbutton');
-
-testbutton.addEventListener("click", funtion(),{
-    document.body.style.backgroudcolor = "#AAAAFF"
-});
+function changebackground() {
+            changeColor('yellow');
+            result.innerHTML = "Background Color changed";
+        }        
