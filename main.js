@@ -1,8 +1,8 @@
-function changebackground(red) {
+function changebackgroundred() {
             document.body.style.backgroundColor = "red";
         }    
 
-function changebackground(blue) {
+function changebackgroundblue() {
             document.body.style.backgroundColor = "blue";
         }        
 
