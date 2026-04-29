@@ -15,7 +15,7 @@ type login struct{
 //usernames worden samen met gegevens in een map bewaard//
 var users = map[string]login{}
 
-//alle functies//
+//alle functies (voor nu, misschien later meer)//
 func main() {
   http.HandleFunc("/register", register)
   http.HandleFunc("/login", login)
