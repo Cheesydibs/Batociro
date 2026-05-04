@@ -24,7 +24,27 @@ func main() {
   http.HandleFunc(":8080", nil)
 }
 
-func register(w http.ResponseWriter, r http.Request){}
+func register(w http.ResponseWriter, r http.Request){ // functie voor registeren
+  if r.Method !=http.MethodPost {
+    er := http.StatusMethodNotAllowed
+    http.Error(w, "Invalid method", er)
+    return
+  }
+
+  username := r.FormValue("username")
+  password := r.FormValue("password")
+  if len(username)<8 || len(password)<8{  //checked of de wachtwoord meer dan 8 carakters heeft
+    er := http.StatusNotAcceptable
+    http.Error(w, "Invalid username/password", er)
+    return
+  }
+
+  if _, ok := users[username]; ok {   checked of username als is gebruikt
+    er := http.StatusConflict
+    http.Error(w, "User already exists", er)
+    return
+  }
+}
 
 func login(w http.ResponseWriter, r http.Request){}
 
