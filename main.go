@@ -44,6 +44,13 @@ func register(w http.ResponseWriter, r http.Request){ // functie voor registeren
     http.Error(w, "User already exists", er)
     return
   }
+
+  HashedPassword, _ :=hashPassword(password)
+  users[username] = login{
+    HashedPassword: HashedPassword,
+  }
+
+  fmt.Fprintln(w, "User succesfully registerd!")
 }
 
 func login(w http.ResponseWriter, r http.Request){}
