@@ -7,5 +7,5 @@ function changebackgroundblue() {
             document.body.style.backgroundColor = "#5bd5f4";
             document.body.style.color = "#8f0606";
         }        
-
+window.location.href="logpag.html";
 
