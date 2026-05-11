@@ -7,5 +7,6 @@ function changebackgroundblue() {
             document.body.style.backgroundColor = "#dadada";
             document.body.style.color = "#2b2b2b";
         }        
-window.location.href="logpag.html";
-
+function redirectlogin() {
+    window.location.href="logpag.html";
+}
