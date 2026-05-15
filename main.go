@@ -24,7 +24,7 @@ func main() {
   http.HandleFunc(":8080", nil)
 }
 
-func register(w http.ResponseWriter, r http.Request){ // functie voor registeren
+func register(w http.ResponseWriter, r *http.Request){ // functie voor registeren
   if r.Method !=http.MethodPost {
     er := http.StatusMethodNotAllowed
     http.Error(w, "Invalid method", er)
