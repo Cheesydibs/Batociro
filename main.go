@@ -1,7 +1,7 @@
 package main
 
 import (
-  "ftm"  //is nodig voor bepaalde functies//
+  "fmt"  //is nodig voor bepaalde functies//
   "net/http"   //zorgt ervoor dat dingen zoals cookies en redirects goed worden gebruikt, denk ik//
   "time"  //is voor tijd, duh//
 )
@@ -53,8 +53,8 @@ func register(w http.ResponseWriter, r *http.Request){ // functie voor registere
   fmt.Fprintln(w, "User succesfully registerd!")
 }
 
-func login(w http.ResponseWriter, r http.Request){}
+func login(w http.ResponseWriter, r *http.Request){}
 
-func logout(w http.ResponseWriter, r http.Request){}
+func logout(w http.ResponseWriter, r *http.Request){}
 
-func protected(w http.ResponseWriter, r http.Request){}
+func protected(w http.ResponseWriter, r *http.Request){}
