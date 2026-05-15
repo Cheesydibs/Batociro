@@ -39,7 +39,7 @@ func register(w http.ResponseWriter, r *http.Request){ // functie voor registere
     return
   }
 
-  if _, ok := users[username]; ok {   checked of username als is gebruikt
+  if _, ok := users[username]; ok {   //checked of username als is gebruikt
     er := http.StatusConflict
     http.Error(w, "User already exists", er)
     return
