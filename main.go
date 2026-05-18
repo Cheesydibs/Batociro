@@ -1,7 +1,7 @@
 package main
 
 import (
-  "ftm"  //is nodig voor bepaalde functies//
+  "fmt"  //is nodig voor bepaalde functies//
   "net/http"   //zorgt ervoor dat dingen zoals cookies en redirects goed worden gebruikt, denk ik//
   "time"  //is voor tijd, duh//
 )
@@ -24,7 +24,7 @@ func main() {
   http.HandleFunc(":8080", nil)
 }
 
-func register(w http.ResponseWriter, r http.Request){ // functie voor registeren
+func register(w http.ResponseWriter, r *http.Request){ // functie voor registeren
   if r.Method !=http.MethodPost {
     er := http.StatusMethodNotAllowed
     http.Error(w, "Invalid method", er)
@@ -39,7 +39,7 @@ func register(w http.ResponseWriter, r http.Request){ // functie voor registeren
     return
   }
 
-  if _, ok := users[username]; ok {   checked of username als is gebruikt
+  if _, ok := users[username]; ok {   //checked of username als is gebruikt
     er := http.StatusConflict
     http.Error(w, "User already exists", er)
     return
@@ -53,8 +53,8 @@ func register(w http.ResponseWriter, r http.Request){ // functie voor registeren
   fmt.Fprintln(w, "User succesfully registerd!")
 }
 
-func login(w http.ResponseWriter, r http.Request){}
+func login(w http.ResponseWriter, r *http.Request){}
 
-func logout(w http.ResponseWriter, r http.Request){}
+func logout(w http.ResponseWriter, r *http.Request){}
 
-func protected(w http.ResponseWriter, r http.Request){}
+func protected(w http.ResponseWriter, r *http.Request){}
