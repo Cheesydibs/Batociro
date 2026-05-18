@@ -1,7 +1,6 @@
 
 * 
   {
-<<<<<<< Updated upstream
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,13 +14,6 @@ body
   background-color: #2b2b2b;  
   margin: 4%; 
   color: #dadada;
-=======
-    background-color: #82a921;  
-    margin-top: 3%; 
-    margin-right: 5%; 
-    margin-bottom: 0%; 
-    margin-left: 5%; 
->>>>>>> Stashed changes
   }
 p
   {
