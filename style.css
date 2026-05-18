@@ -1,11 +1,37 @@
-body
+
+* 
   {
-    background-color: #2b2b2b;  
-    margin: 4%; 
-    color: #dadada;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+body 
+  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;    
+  background-color: #2b2b2b;  
+  margin: 4%; 
+  color: #dadada;
   }
 p
   {
-    font-family: Arial;
-    font-size: 100%;
+  font-family: Arial;
+  font-size: 100%;
+  }
+  .container 
+  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  }
+  .chart
+  {
+padding: 2rem;
+border: 1px solid #f49131;
+border-radius: 1rem;
+background: #251c35;
+box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
   }

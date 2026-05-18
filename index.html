@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <head>
   <title>Keygene Data Kassen</title>
   <link rel="stylesheet" href="style.css">
   <meta charset="utf-8">
 </head>
-  <body>
+  
+<body>
     <button onclick="changebackgroundred()">Light Mode</button>
     <button onclick="changebackgroundblue()">Dark Mode</button>
     <button onclick="redirectlogin()">redirect to login page</button>
@@ -13,5 +15,16 @@
     <p>Dit is waar de data van keygene zal worden gevisualiseerd</p>
     <p>Voor nu staat er nog niets </p> 
     <p></p>
+    
+    <div class="container">
+      <canvas id="barchart" width="300" height="300"></canvas>
+    </div>
+    <div class="chart">
+            <canvas id="doughnut" width="300" height="300"></canvas>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+    <script src="chart1.js"></script>
+    <script src="chart2.js"></script> 
   </body>
 </html>
