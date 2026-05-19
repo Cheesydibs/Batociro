@@ -30,6 +30,16 @@ p
 padding: 2rem;
 border: 1px solid #f49131;
 border-radius: 1rem;
-background: #251c35;
+background-color: #251c35;
 box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
+  }
+  .expdiv1
+  {
+background-color: #6e6e6e;
+  }  .expdiv1
+  {
+background-color: #cb5f5f;
+  }  .expdiv1
+  {
+background-color: #70eaea;
   }
