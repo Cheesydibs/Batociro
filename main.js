@@ -9,6 +9,6 @@ function changebackgroundblue() {
         }        
 function redirectlogin() {
     window.location.href="logpag.html";
-}function registeruser() {
-    
+}function todatapage() {
+    window.location.href="exp.html";
 }
