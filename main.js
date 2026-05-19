@@ -6,9 +6,12 @@ function changebackgroundred() {
 function changebackgroundblue() {
             document.body.style.backgroundColor = "#dadada";
             document.body.style.color = "#2b2b2b";
-        }        
+        }       
+
 function redirectlogin() {
     window.location.href="logpag.html";
-}function todatapage() {
+}
+
+function todatapage() {
     window.location.href="exp.html";
 }
