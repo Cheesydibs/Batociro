@@ -36,13 +36,14 @@ box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
   .expdiv1
   {
 background-color: #6e6e6e;
-width: 90%;
+width: 97%;
   }  
   .expdiv2
   {
 background-color: #cb5f5f;
 width: 40%;
-height: 500pt;
+height: 400pt;
+align-content: right;
   }  
   .expdiv3
   {
