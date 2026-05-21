@@ -9,8 +9,7 @@ body
   {
   display: flex;
   min-height: 100vh;    
-  background-color: #2b2b2b;  
-  margin: 4%; 
+  background-color: #2b2b2b; 
   color: #dadada;
   }
 p
@@ -36,16 +35,23 @@ box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
   .expdiv1
   {
 background-color: #6e6e6e;
-width: 97%;
+margin-right: 5%;
+margin-left: 5%;
+margin-top: 0;
+margin-bottom: 0;
+width: 270%;
   }  
   .expdiv2
   {
-background-color: #cb5f5f;
+background-color: #63cb5f;
+border-radius: 3%;
 width: 40%;
-height: 400pt;
-align-content: right;
+height: 400pt;       
+margin-right: 6%;
+ 
   }  
   .expdiv3
   {
-background-color: #70eaea;
+background-color: #FFFFFF;
+border-radius: 3%;
   }
