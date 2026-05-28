@@ -11,21 +11,80 @@
     <button onclick="todatapage()" class="button">redirect to data page</button>
         <script src="main.js"></script>
         <h1 class="title">Tomaat</h1>     
-        <div class="expdiv2">
-            <div class="expdiv3">
-                <h1 class="subtitle">Meest recente experiment</h1>
-            </div>
-            <div class="expdiv4">
-                <p>Data: ---<br>
-                    Notities:---<br>
-                    Blablabla
-                </p>
-                <hr>
-                <label for="excelFile">Upload Excel (first sheet: Label, Value):</label>
+        <hr>
+                <label for="excelFile">Upload Excel (first sheet should contain a date column and a numeric value column):</label>
                 <input type="file" id="excelFile" accept=".xls,.xlsx" />
-                <div style="max-width:700px;">
-                    <canvas id="excelChart" width="700" height="400"></canvas>
+                <div style="margin-top:8px; margin-bottom:8px; display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+                    <label for="rangeSelect">Range:</label>
+                    <select id="rangeSelect">
+                        <option value="all">All data</option>
+                        <option value="1month">1 month</option>
+                        <option value="2weeks">2 weeks</option>
+                        <option value="1week">1 week</option>
+                        <option value="fewdays">3 days</option>
+                        <option value="1day">1 day</option>
+                    </select>
+                    <span style="margin-left:12px; font-size:0.9em; color:#666;">Choose chart type per panel:</span>
                 </div>
+                <div class="chart-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:900px;">
+                    <div class="chart-item" data-chart="0">
+                        <div class="chart-header">
+                            <strong>Chart 1</strong>
+                            <div class="chart-controls">
+                                <button type="button" class="fullscreen-btn" data-chart="0">Fullscreen</button>
+                                <select class="chartType" data-chart="0">
+                                    <option value="line">Line</option>
+                                    <option value="bar">Bar</option>
+                                    <option value="scatter">Scatter</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="excelChart0"></canvas>
+                    </div>
+                    <div class="chart-item" data-chart="1">
+                        <div class="chart-header">
+                            <strong>Chart 2</strong>
+                            <div class="chart-controls">
+                                <button type="button" class="fullscreen-btn" data-chart="1">Fullscreen</button>
+                                <select class="chartType" data-chart="1">
+                                    <option value="bar">Bar</option>
+                                    <option value="line">Line</option>
+                                    <option value="scatter">Scatter</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="excelChart1"></canvas>
+                    </div>
+                    <div class="chart-item" data-chart="2">
+                        <div class="chart-header">
+                            <strong>Chart 3</strong>
+                            <div class="chart-controls">
+                                <button type="button" class="fullscreen-btn" data-chart="2">Fullscreen</button>
+                                <select class="chartType" data-chart="2">
+                                    <option value="bar">Bar</option>
+                                    <option value="line">Line</option>
+                                    <option value="scatter">Scatter</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="excelChart2"></canvas>
+                    </div>
+                    <div class="chart-item" data-chart="3">
+                        <div class="chart-header">
+                            <strong>Chart 4</strong>
+                            <div class="chart-controls">
+                                <button type="button" class="fullscreen-btn" data-chart="3">Fullscreen</button>
+                                <select class="chartType" data-chart="3">
+                                    <option value="bar">Bar</option>
+                                    <option value="line">Line</option>
+                                    <option value="scatter">Scatter</option>
+                                </select>
+                            </div>
+                        </div>
+                        <canvas id="excelChart3"></canvas>
+                    </div>
+                </div>
+    
             </div>
         </div>
     </div>
