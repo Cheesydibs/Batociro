@@ -34,7 +34,7 @@ box-shadow: 0 0 16px rgba(0, 0, 0, 0.8);
   }
   .expdiv1
   {
-background-color: #6e6e6e;
+background-color: #404040;
 margin-right: 5%;
 margin-left: 5%;
 margin-top: 0;
@@ -43,15 +43,33 @@ width: 270%;
   }  
   .expdiv2
   {
-background-color: #63cb5f;
-border-radius: 3%;
+background-color: #1a5817;
+border-radius: 7%;
 width: 40%;
 height: 400pt;       
 margin-right: 6%;
+margin-left: 60%;
  
   }  
   .expdiv3
   {
 background-color: #FFFFFF;
 border-radius: 3%;
+  }
+  .title
+  {
+text-align: center;
+  color: #000000; 
+  font-size: 350%;
+  }
+    .subtitle
+  {
+text-align: center;
+  color: #000000; 
+  font-size: 250%;
+  }
+  p 
+  {
+margin: 4%;
+font-size: 120%;
   }
