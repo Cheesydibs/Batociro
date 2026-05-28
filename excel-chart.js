@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rangeSelect = document.getElementById('rangeSelect');
     const chartTypeSelectors = Array.from(document.querySelectorAll('.chartType'));
     const fullscreenButtons = Array.from(document.querySelectorAll('.fullscreen-btn'));
+    const exitFullscreenButtons = Array.from(document.querySelectorAll('.exit-fullscreen-btn'));
     const canvasIds = ['excelChart0', 'excelChart1', 'excelChart2', 'excelChart3'];
     const charts = [null, null, null, null];
 
@@ -247,7 +248,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     spanGaps: true
                 };
             });
-            common.data = { labels, datasets: datasetEntries };
+
+            const averageDatasets = datasetEntries.map((ds, dsIdx) => {
+                const values = ds.data.filter(v => Number.isFinite(v));
+                if (values.length === 0) return null;
+                const avgValue = values.reduce((sum, value) => sum + value, 0) / values.length;
+                return {
+                    type: 'line',
+                    label: `Average ${ds.label}`,
+                    data: new Array(labels.length).fill(Number(avgValue.toFixed(2))),
+                    borderColor: 'rgba(255, 205, 86, 1)',
+                    backgroundColor: 'rgba(255, 205, 86, 0.15)',
+                    borderWidth: 2,
+                    borderDash: [6, 4],
+                    pointRadius: 0,
+                    fill: false,
+                    tension: 0,
+                    order: 1
+                };
+            }).filter(Boolean);
+
+            common.data = { labels, datasets: [...datasetEntries, ...averageDatasets] };
             common.options.scales = {
                 x: { title: { display: true, text: 'Date / Category' } },
                 y: { beginAtZero: true, title: { display: true, text: chartMeta.yAxis } }
@@ -296,6 +317,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rangeSelect) rangeSelect.addEventListener('change', updateAllCharts);
     chartTypeSelectors.forEach(s => s.addEventListener('change', updateAllCharts));
     fullscreenButtons.forEach(btn => btn.addEventListener('click', () => requestFullScreenForChart(Number(btn.dataset.chart))));
+    exitFullscreenButtons.forEach(btn => btn.addEventListener('click', () => exitFullScreen()));
+
+    function exitFullScreen() {
+        if (document.fullscreenElement) {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+    }
 
     document.addEventListener('fullscreenchange', () => {
         document.querySelectorAll('.chart-item.fullscreen').forEach(el => el.classList.remove('fullscreen'));
@@ -303,5 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (fs && fs.classList.contains('chart-item')) {
             fs.classList.add('fullscreen');
         }
+        charts.forEach(chart => chart?.resize());
     });
 });

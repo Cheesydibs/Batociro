@@ -90,7 +90,8 @@ text-align: center;
     gap: 0.5rem;
     align-items: center;
   }
-  .fullscreen-btn {
+  .fullscreen-btn,
+  .exit-fullscreen-btn {
     border: 1px solid #dadada;
     background: transparent;
     color: #dadada;
@@ -99,8 +100,15 @@ text-align: center;
     cursor: pointer;
     font-size: 0.9rem;
   }
-  .fullscreen-btn:hover {
+  .fullscreen-btn:hover,
+  .exit-fullscreen-btn:hover {
     background: rgba(255,255,255,0.08);
+  }
+  .exit-fullscreen-btn {
+    display: none;
+  }
+  .chart-item.fullscreen .exit-fullscreen-btn {
+    display: inline-flex;
   }
   .chart-item {
     background: #1f1f1f;
