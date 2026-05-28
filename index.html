@@ -7,22 +7,24 @@
 </head>
   
 <body>
-    <button onclick="changebackgroundred()">Light Mode</button>
-    <button onclick="changebackgroundblue()">Dark Mode</button>
-    <button onclick="redirectlogin()">redirect to login page</button>
-    <button onclick="todatapage()">redirect to data page</button>
+<div class="expdiv1">
+    <button onclick="changebackgroundred()" class="button">Light Mode</button>
+    <button onclick="changebackgroundblue()" class="button">Dark Mode</button>
+    <button onclick="redirectlogin()" class="button">redirect to login page</button>
+    <button onclick="todatapage()" class="button">redirect to data page</button>
     <script src="main.js"></script>
     <p>charts</p>
     
     <div class="container">
-      <canvas id="barchart" width="300" height="300"></canvas>
+      <canvas id="barchart" width="100" height="100"></canvas>
     </div>
     <div class="chart">
-            <canvas id="doughnut" width="300" height="300"></canvas>
+            <canvas id="doughnut" width="100" height="100"></canvas>
 
     </div> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
     <script src="chart1.js"></script>
     <script src="chart2.js"></script> 
-  </body>
+</div>
+</body>
 </html>
