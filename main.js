@@ -15,3 +15,7 @@ function redirectlogin() {
 function todatapage() {
     window.location.href="exp.html";
 }
+function tomainpage() {
+    window.location.href="index.html";
+}
+

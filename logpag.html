@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <head>
-
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
 </head>
 <body>
+    <div class="expdiv1">
+    <button onclick="tomainpage()" class="button">redirect to main page</button>
+    <button onclick="redirectlogin()" class="button">redirect to login page</button>
+    <button onclick="todatapage()" class="button">redirect to data page</button>
+        <script src="main.js"></script>
     <div class="login-box">
         <form action="main.go/Register" method="post">
             <h2>Login</h2>
@@ -23,8 +29,10 @@
             <button type="submit">Login</button>
             <div class="register-link">
                 <p>Don't have an account? <a href="#">Register</a></p>
+            
             </div>
         </form>
     </div>
+</div>
 </body>
 </html>
